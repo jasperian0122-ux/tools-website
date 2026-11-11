@@ -1,0 +1,19 @@
+{
+  "name": "tools-website",
+  "version": "1.0.0",
+  "description": "A collection of 12 useful tool websites in one project",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server",
+    "build": "echo 'No build step needed - pure HTML/CSS/JS'",
+    "test": "echo 'No test framework configured'"
+  },
+  "keywords": [
+    "tools",
+    "utilities",
+    "web-development",
+    "javascript"
+  ],
+  "author": "WorkBuddy",
+  "license": "MIT"
+}

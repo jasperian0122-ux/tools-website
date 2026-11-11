@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML/CSS/JS 在线格式化/压缩工具 - WorkBuddy Tools</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="tool-container">
+    <header class="tool-header">
+      <h1>📝 在线代码格式化/压缩</h1>
+      <p>HTML、CSS、JavaScript 代码格式化与压缩</p>
+    </header>
+    
+    <main class="converter">
+      <div>
+        <label>选择语言</label>
+        <select id="language-select">
+          <option value="html">HTML</option>
+          <option value="css">CSS</option>
+          <option value="javascript">JavaScript</option>
+        </select>
+      </div>
+      
+      <textarea id="code-input" rows="15" placeholder="粘贴代码在这里..." style="width:100%; font-family: 'Monospace', monospace; font-size:13px;"></textarea>
+      
+      <div class="actions" style="margin:1.5rem 0;">
+        <button class="format-btn" data-format="prettify">格式化</button>
+        <button class="format-btn" data-format="minify">压缩</button>
+        <button class="format-btn" data-format="pretty-quick">Pretty Quick</button>
+      </div>
+      
+      <div class="output-tabs">
+        <button class="output-tab active" data-output="original">原始代码</button>
+        <button class="output-tab" data-output="result">结果</button>
+      </div>
+      
+      <div class="panels">
+        <div class="panel active" id="panel-original">
+          <div class="toolbar">
+            <span>原始代码</span>
+            <div class="btn-group">
+              <button class="copy-btn">复制</button>
+              <button class="download-btn">下载</button>
+            </div>
+          </div>
+          <pre><code id="code-original"></code></pre>
+        </div>
+        
+        <div class="panel" id="panel-result">
+          <div class="toolbar">
+            <span>格式化结果</span>
+            <div class="btn-group">
+              <button class="copy-btn">复制</button>
+              <button class="download-btn">下载</button>
+            </div>
+          </div>
+          <pre><code id="code-result"></code></pre>
+        </div>
+      </div>
+    </main>
+    
+    <footer class="tool-footer">
+      <p>WorkBuddy Tools Collection</p>
+    </footer>
+  </div>
+
+  <script src="../script.js"></script>
+</body>
+</html>

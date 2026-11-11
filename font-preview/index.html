@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>字体预览与对比 - WorkBuddy Tools</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="tool-container">
+    <header class="tool-header">
+      <h1>🔤 字体预览与对比</h1>
+      <p>输入文字实时预览多种字体</p>
+    </header>
+    
+    <main class="converter">
+      <div class="input-area">
+        <textarea id="font-text" rows="2" placeholder="输入要预览的文字..." style="width:100%; font-size:1rem; margin-bottom:1rem;"></textarea>
+      </div>
+      
+      <div class="font-preview" style="margin:1.5rem 0;">
+        <div class="font-family-selector">
+          <label>选择字体</label>
+          <select id="font-select">
+            <option value="sans-serif">sans-serif (默认)</option>
+            <option value="serif">serif</option>
+            <option value="monospace">monospace</option>
+            <option value="Arial">Arial</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Courier New">Courier New</option>
+          </select>
+        </div>
+        
+        <div class="font-size-control" style="margin-top:0.5rem;">
+          <label>大小: <span id="font-size">16</span>px</label>
+          <input type="range" id="font-size-slider" min="10" max="48" step="1" value="16">
+        </div>
+      </div>
+      
+      <div class="preview-area" style="min-height:150px; display:flex; align-items:center; justify-content:center;">
+        <div id="font-preview" style="font-size:16px; min-width:200px; text-align:center;">
+          <span id="preview-text">WorkBuddy</span>
+        </div>
+      </div>
+      
+      <div class="font-info" style="margin-top:1.5rem;">
+        <p>CSS 代码: <code id="css-code"></code></p>
+      </div>
+      
+      <div class="actions" style="margin-top:1rem;">
+        <button class="copy-btn" id="copy-css">复制 CSS</button>
+      </div>
+    </main>
+    
+    <footer class="tool-footer">
+      <p>WorkBuddy Tools Collection</p>
+    </footer>
+  </div>
+
+  <script src="../script.js"></script>
+</body>
+</html>

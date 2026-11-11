@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>视频链接 + 字幕提取器 - WorkBuddy Tools</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="tool-container">
+    <header class="tool-header">
+      <h1>🎬 视频链接 + 字幕提取</h1>
+      <p>粘贴视频网址自动提取字幕</p>
+    </header>
+    
+    <main class="converter">
+      <div class="url-input-area">
+        <label>粘贴视频网址</label>
+        <textarea id="video-url" placeholder="例如: https://www.bilibili.com/video/... 或 https://www.youtube.com/watch..."></textarea>
+      </div>
+      
+      <div class="platform-tabs">
+        <button class="platform-tab active" data-platform="bilibili">Bilibili</button>
+        <button class="platform-tab" data-platform="youtube">YouTube</button>
+        <button class="platform-tab" data-platform="twitter">Twitter/X</button>
+      </div>
+      
+      <div class="status-area" style="margin-top:1rem;">
+        <span id="status-text">粘贴视频网址开始提取</span>
+      </div>
+      
+      <div class="extract-btn">
+        <button class="primary-btn" id="extract-btn">提取字幕</button>
+      </div>
+      
+      <div class="results-area" style="margin-top:2rem; display:none;">
+        <h4>提取结果</h4>
+        
+        <div class="subtitle-info" id="subtitle-info">
+          <p>状态: 等待提取...</p>
+        </div>
+        
+        <div class="subtitle-text-area" style="margin-top:1rem;">
+          <textarea id="subtitle-text" rows="5" placeholder="提取的字幕文本将显示在这里..." readonly style="width:100%; font-size:13px;"></textarea>
+        </div>
+        
+        <div class="subtitle-actions" style="margin-top:1rem;">
+          <button class="copy-btn">复制全部</button>
+          <button class="download-btn">下载 SRT</button>
+          <button class="download-btn" style="background:#6c757d;">下载 TXT</button>
+        </div>
+      </div>
+    </main>
+    
+    <footer class="tool-footer">
+      <p>WorkBuddy Tools Collection</p>
+    </footer>
+  </div>
+
+  <script src="../script.js"></script>
+</body>
+</html>

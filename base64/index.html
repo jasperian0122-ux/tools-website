@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Base64 编码/解码 - WorkBuddy Tools</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="tool-container">
+    <header class="tool-header">
+      <h1>🔡 Base64 编码/解码</h1>
+      <p>文本和文件转 Base64</p>
+    </header>
+    
+    <main class="converter">
+      <div class="mode-tabs">
+        <button class="tab-btn active" data-mode="encode">编码</button>
+        <button class="tab-btn" data-mode="decode">解码</button>
+      </div>
+      
+      <div class="input-area">
+        <textarea id="input-text" placeholder="输入要编码/解码的文本..."></textarea>
+        <div class="file-input-wrapper" style="margin-top: 1rem;">
+          <label for="file-input" class="file-label">选择文件</label>
+          <input type="file" id="file-input" accept=".txt,.json,.html,.css,.js,.png,.jpg,.pdf">
+        </div>
+      </div>
+      
+      <div class="output-area" style="margin-top: 1.5rem;">
+        <textarea id="output-text" readonly placeholder="结果将显示在这里..."></textarea>
+        <div class="output-actions">
+          <button class="copy-btn">复制到剪贴板</button>
+          <button class="download-btn" style="display:none;">下载文件</button>
+        </div>
+      </div>
+    </main>
+    
+    <footer class="tool-footer">
+      <p>WorkBuddy Tools Collection</p>
+    </footer>
+  </div>
+
+  <script src="../script.js"></script>
+</body>
+</html>

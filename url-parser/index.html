@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>网址/参数解析工具 - WorkBuddy Tools</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="tool-container">
+    <header class="tool-header">
+      <h1>🔗 网址/参数解析</h1>
+      <p>提取和分析 URL 参数</p>
+    </header>
+    
+    <main class="converter">
+      <div class="input-area">
+        <textarea id="url-input" placeholder="粘贴网址在这里..." rows="2" style="width:100%; font-size:1rem;"></textarea>
+        <div style="margin-top:1rem;">
+          <button class="analyze-btn">分析 URL</button>
+          <button class="clear-btn">清空</button>
+        </div>
+      </div>
+      
+      <div class="result-area" style="margin-top:2rem;">
+        <div class="tabs">
+          <button class="tab active" data-tab="parsed">解析结果</button>
+          <button class="tab" data-tab="query">查询字符串</button>
+          <button class="tab" data-tab="path">路径信息</button>
+        </div>
+        
+        <div class="panels">
+          <div class="panel active" id="panel-parsed">
+            <h4>解析结果</h4>
+            <div class="info-grid">
+              <div class="info-item">
+                <span class="label">协议</span>
+                <span class="value" id="protocol"></span>
+              </div>
+              <div class="info-item">
+                <span class="label">主机</span>
+                <span class="value" id="host"></span>
+              </div>
+              <div class="info-item">
+                <span class="label">路径</span>
+                <span class="value" id="path"></span>
+              </div>
+              <div class="info-item">
+                <span class="label">端口</span>
+                <span class="value" id="port"></span>
+              </div>
+            </div>
+            
+            <div class="info-group">
+              <span class="label">查询参数</span>
+              <textarea id="query-textarea" rows="3" style="width:100%; margin-top:0.5rem; font-size:0.85rem;"></textarea>
+            </div>
+            
+            <div class="info-group" style="margin-top:1rem;">
+              <span class="label">片段</span>
+              <span class="value" id="fragment"></span>
+            </div>
+          </div>
+          
+          <div class="panel" id="panel-query">
+            <h4>查询参数详情</h4>
+            <div class="params-list" id="params-list">
+              <!-- Dynamically generated -->
+            </div>
+          </div>
+          
+          <div class="panel" id="panel-path">
+            <h4>路径信息</h4>
+            <p>URL 路径组件分析将在下方显示</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    
+    <footer class="tool-footer">
+      <p>WorkBuddy Tools Collection</p>
+    </footer>
+  </div>
+
+  <script src="../script.js"></script>
+</body>
+</html>

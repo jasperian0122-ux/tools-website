@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>颜色转换器 - WorkBuddy Tools</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="tool-container">
+    <header class="tool-header">
+      <h1>🎨 颜色转换器</h1>
+      <p>RGB/HEX/HSL/HSV 互相转换</p>
+    </header>
+    
+    <main class="converter">
+      <div class="color-display">
+        <div id="color-square" class="color-square"></div>
+        <div id="color-hex" class="color-hex"></div>
+      </div>
+      
+      <div class="tabs">
+        <button class="tab active" data-mode="rgb">RGB</button>
+        <button class="tab" data-mode="hex">HEX</button>
+        <button class="tab" data-mode="hsl">HSL</button>
+        <button class="tab" data-mode="hsv">HSV</button>
+      </div>
+      
+      <div class="input-group">
+        <div class="input-section">
+          <label>RGB</label>
+          <div class="input-row">
+            <input type="number" id="input-r" min="0" max="255" step="1" value="255">
+            <span>R</span>
+          </div>
+          <div class="input-row">
+            <input type="number" id="input-g" min="0" max="255" step="1" value="0">
+            <span>G</span>
+          </div>
+          <div class="input-row">
+            <input type="number" id="input-b" min="0" max="255" step="1" value="0">
+            <span>B</span>
+          </div>
+        </div>
+        
+        <div class="input-section">
+          <label>HEX</label>
+          <input type="text" id="input-hex" placeholder="#FF0000" readonly>
+        </div>
+        
+        <div class="input-section">
+          <label>HSL</label>
+          <div class="input-row">
+            <input type="number" id="input-h" min="0" max="360" step="1" value="0">
+            <span>H</span>
+          </div>
+          <div class="input-row">
+            <input type="number" id="input-s" min="0" max="100" step="0.01" value="100">
+            <span>S%</span>
+          </div>
+          <div class="input-row">
+            <input type="number" id="input-l" min="0" max="100" step="0.01" value="50">
+            <span>L%</span>
+          </div>
+        </div>
+        
+        <div class="input-section">
+          <label>HSV</label>
+          <div class="input-row">
+            <input type="number" id="input-hsv" min="0" max="360" step="1" value="0">
+            <span>H</span>
+          </div>
+          <div class="input-row">
+            <input type="number" id="input-sat" min="0" max="100" step="0.01" value="100">
+            <span>S%</span>
+          </div>
+          <div class="input-row">
+            <input type="number" id="input-val" min="0" max="100" step="0.01" value="100">
+            <span>V%</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="actions">
+        <button class="copy-btn" id="copy-hex">复制 HEX</button>
+        <button class="copy-btn" id="copy-rgb">复制 RGB</button>
+      </div>
+      
+      <div class="color-info">
+        <p>预览颜色: <span id="display-hex">#FF0000</span></p>
+      </div>
+    </main>
+    
+    <footer class="tool-footer">
+      <p>WorkBuddy Tools Collection</p>
+    </footer>
+  </div>
+
+  <script src="../script.js"></script>
+</body>
+</html>

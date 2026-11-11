@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>随机抽选/转盘 - WorkBuddy Tools</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="tool-container">
+    <header class="tool-header">
+      <h1>🎯 随机抽选/转盘</h1>
+      <p>自定义选项、动画转盘、多轮抽选</p>
+    </header>
+    
+    <main class="converter">
+      <div class="input-area">
+        <label>选项 (每行一个)</label>
+        <textarea id="options-input" rows="4" placeholder="输入每个选项..." style="width:100%; font-size:1rem; margin-bottom:1rem;"></textarea>
+      </div>
+      
+      <div class="controls">
+        <div class="control-group">
+          <label>权重设置</label>
+          <input type="range" id="weight-slider" min="1" max="10" step="1" value="1">
+          <span id="weight-value">1</span>
+        </div>
+        
+        <div class="control-group">
+          <label>抽选次数</label>
+          <input type="number" id="spin-count" value="1" min="1" max="10">
+        </div>
+        
+        <button class="generate-btn" id="spin-btn">开始抽选</button>
+      </div>
+      
+      <div class="result-area" style="margin-top:2rem; padding-top:2rem; border-top:1px solid #eee;">
+        <h4>抽选结果</h4>
+        <div class="result-display" id="result-display">
+          <p>等待抽选...</p>
+        </div>
+        
+        <div class="result-details" id="result-details" style="margin-top:1rem; display:none;">
+          <p>本次抽选共 <span id="total-spins">1</span> 次</p>
+        </div>
+      </div>
+    </main>
+    
+    <footer class="tool-footer">
+      <p>WorkBuddy Tools Collection</p>
+    </footer>
+  </div>
+
+  <script src="../script.js"></script>
+</body>
+</html>

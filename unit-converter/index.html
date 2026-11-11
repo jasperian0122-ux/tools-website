@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>单位转换器 - WorkBuddy Tools</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="tool-container">
+    <header class="tool-header">
+      <h1>📏 单位转换器</h1>
+      <p>Length, Weight, Temperature, Currency</p>
+    </header>
+    
+    <main class="converter">
+      <div class="selectors">
+        <div class="from-selector">
+          <label>从</label>
+          <select id="from-unit">
+            <option value="meter">米 (m)</option>
+            <option value="kilometer">千米 (km)</option>
+            <option value="centimeter">厘米 (cm)</option>
+            <option value="millimeter">毫米 (mm)</option>
+            <option value="inch">英寸 (in)</option>
+            <option value="foot">英尺 (ft)</option>
+            <option value="yard">码 (yd)</option>
+            <option value="mile">英里 (mi)</option>
+            <option value="gram">克 (g)</option>
+            <option value="kilogram">千克 (kg)</option>
+            <option value="pound">磅 (lb)</option>
+            <option value="ounce">盎司 (oz)</option>
+            <option value="celsius">摄氏度 (°C)</option>
+            <option value="fahrenheit">华氏度 (°F)</option>
+            <option value="kelvin">开尔文 (K)</option>
+          </select>
+        </div>
+        <div class="to-selector">
+          <label>转换为</label>
+          <select id="to-unit">
+            <option value="meter">米 (m)</option>
+            <option value="kilometer">千米 (km)</option>
+            <option value="centimeter">厘米 (cm)</option>
+            <option value="millimeter">毫米 (mm)</option>
+            <option value="inch">英寸 (in)</option>
+            <option value="foot">英尺 (ft)</option>
+            <option value="yard">码 (yd)</option>
+            <option value="mile">英里 (mi)</option>
+            <option value="gram">克 (g)</option>
+            <option value="kilogram">千克 (kg)</option>
+            <option value="pound">磅 (lb)</option>
+            <option value="ounce">盎司 (oz)</option>
+            <option value="celsius">摄氏度 (°C)</option>
+            <option value="fahrenheit">华氏度 (°F)</option>
+            <option value="kelvin">开尔文 (K)</option>
+          </select>
+        </div>
+      </div>
+      
+      <div class="input-group">
+        <input type="number" id="input-value" placeholder="输入数值" step="0.01">
+        <button class="convert-btn" id="convert-btn">转换</button>
+      </div>
+      
+      <div class="result">
+        <p>结果: <span id="result">0</span> <span id="result-unit"></span></p>
+        <p id="result-detail"></p>
+      </div>
+    </main>
+    
+    <footer class="tool-footer">
+      <p>WorkBuddy Tools Collection</p>
+    </footer>
+  </div>
+
+  <script src="../script.js"></unit-converter-converter></script>
+</body>
+</html>

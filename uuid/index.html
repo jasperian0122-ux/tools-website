@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UUID/随机字符串生成器 - WorkBuddy Tools</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="tool-container">
+    <header class="tool-header">
+      <h1>🆔 UUID/随机字符串生成器</h1>
+      <p>生成唯一标识符或随机字符串</p>
+    </header>
+    
+    <main class="converter">
+      <div class="mode-tabs">
+        <button class="tab-btn active" data-mode="uuid">UUID v4</button>
+        <button class="tab-btn" data-mode="random">自定义长度</button>
+        <button class="tab-btn" data-mode="batch">批量生成</button>
+      </div>
+      
+      <div class="input-area">
+        <div id="uuid-mode" class="mode-content active">
+          <p>点击下面的按钮生成 UUID v4</p>
+          <button class="generate-btn" id="generate-uuid">生成 UUID</button>
+        </div>
+        
+        <div id="random-mode" class="mode-content">
+          <label>长度: <span id="length-value">16</span> 字符</label>
+          <input type="range" id="length-slider" min="4" max="64" step="1">
+          <br>
+          <label>字符类型:
+            <input type="checkbox" id="include-numbers" checked> 包含数字
+            <input type="checkbox" id="include-uppercase" checked> 包含大写
+            <input type="checkbox" id="include-lowercase" checked> 包含小写
+          </label>
+        </div>
+        
+        <div id="batch-mode" class="mode-content">
+          <label>数量: <input type="number" id="batch-count" value="5" min="1" max="50"></label>
+          <button class="generate-btn" id="generate-batch">批量生成</button>
+          <p>每行一个</p>
+          <textarea id="batch-output" readonly rows="3" style="width:100%; margin-top:0.5rem;"></textarea>
+        </div>
+      </div>
+    </main>
+    
+    <footer class="tool-footer">
+      <p>WorkBuddy Tools Collection</p>
+    </footer>
+  </div>
+
+  <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>字符计数/阅读时间 - WorkBuddy Tools</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="tool-container">
+    <header class="tool-header">
+      <h1>📝 字符计数/阅读时间</h1>
+      <p>实时统计字数、行数、词频和阅读时长</p>
+    </header>
+    
+    <main class="converter">
+      <div class="textarea-wrapper">
+        <textarea id="text-input" rows="10" placeholder="在此输入或粘贴文字内容..."></textarea>
+      </div>
+      
+      <div class="stats-cards">
+        <div class="stat-card">
+          <div class="stat-number" id="char-count">0</div>
+          <div class="stat-label">字符数(含空格)</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" id="char-count-no-space">0</div>
+          <div class="stat-label">字符数(不含空格)</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" id="word-count">0</div>
+          <div class="stat-label">单词数</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" id="line-count">0</div>
+          <div class="stat-label">行数</div>
+        </div>
+      </div>
+      
+      <div class="analysis-section" style="margin-top:2rem;">
+        <h4>深度分析</h4>
+        <div class="analysis-tabs">
+          <button class="analysis-tab active" data-analyze="freq">词频统计</button>
+          <button class="analysis-tab" data-analyze="read">阅读时长</button>
+        </div>
+        
+        <div class="analysis-panels">
+          <div class="analysis-panel active" id="panel-freq">
+            <div class="freq-visual">
+              <p>词频分布将在下方显示</p>
+              <div id="freq-list" style="margin-top:1rem; max-height:200px; overflow-y:auto; font-size:0.85rem;"></div>
+            </div>
+          </div>
+          
+          <div class="analysis-panel" id="panel-read">
+            <p>阅读时长估计: <span id="read-time">0</span> 分钟</p>
+            <p style="font-size:0.85rem; margin-top:0.5rem;">基于每分钟 200 词的阅读速度计算</p>
+            <p style="font-size:0.85rem; margin-top:0.5rem; color: #666;">实际阅读速度因人而异</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    
+    <footer class="tool-footer">
+      <p>WorkBuddy Tools Collection</p>
+    </footer>
+  </div>
+
+  <script src="../script.js"></script>
+</body>
+</html>
